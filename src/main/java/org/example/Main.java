@@ -3,13 +3,18 @@ package org.example;
 import org.example.enums.StudyProfile;
 import org.example.model.Student;
 import org.example.model.University;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
+
 public class Main {
+    private final static Logger logger = LoggerFactory.getLogger(Main.class);
+
     public static void main(String[] args) {
-        printInfo();
+        logger.info("Start");
+        logger.info("End");
     }
 
     public static void printInfo() {
@@ -60,6 +65,10 @@ public class Main {
         List<Student> students = List.of(student, student1, student2);
 
         System.out.println("Университеты: " + universities + '\n' + "Студенты: " + students);
-
     }
+
+    public static boolean get() {
+        return Thread.currentThread().getStackTrace().length > 0;
+    }
+
 }

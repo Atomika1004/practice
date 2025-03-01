@@ -8,7 +8,7 @@ import lombok.Data;
 public class Student {
     private String fillName;
     private String universityId;
-    private int currentCourseNumber;
+    private float currentCourseNumber;
     private float avgExamScore;
 
     @Override

@@ -5,5 +5,8 @@ public enum StudyProfile {
     ECONOMY,
     IT,
     ARCHITECTURE,
+    PHYSICS,
+    LINGUISTICS,
+    MATHEMATICS
 
 }

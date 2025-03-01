@@ -10,7 +10,7 @@ public class University {
     private String id;
     private String fullName;
     private String shortname;
-    private int yearOfFound;
+    private float yearOfFound;
     private StudyProfile studyProfile;
 
     @Override
