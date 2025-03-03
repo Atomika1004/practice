@@ -6,7 +6,7 @@ import lombok.Data;
 @Builder
 @Data
 public class Student {
-    private String fillName;
+    private String fullName;
     private String universityId;
     private float currentCourseNumber;
     private float avgExamScore;
@@ -14,7 +14,7 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "fillName='" + fillName + '\'' +
+                "fillName='" + fullName + '\'' +
                 ", universityId='" + universityId + '\'' +
                 ", currentCourseNumber=" + currentCourseNumber +
                 ", avgExamScore=" + avgExamScore +

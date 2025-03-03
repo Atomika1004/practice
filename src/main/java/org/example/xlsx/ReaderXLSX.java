@@ -63,7 +63,7 @@ public class ReaderXLSX {
             try {
                 students.add(Student.builder()
                         .universityId(split[0])
-                        .fillName(split[1])
+                        .fullName(split[1])
                         .currentCourseNumber(Float.parseFloat(split[2]))
                         .avgExamScore(Float.parseFloat(split[3]))
                         .build()

@@ -43,19 +43,19 @@ public class Main {
                 .build();
 
         Student student = Student.builder()
-                .fillName("Иван Иванов Ивановоч")
+                .fullName("Иван Иванов Ивановоч")
                 .universityId("1")
                 .currentCourseNumber(2)
                 .avgExamScore(4.55F)
                 .build();
         Student student1 = Student.builder()
-                .fillName("Алексей Чиков Александрович")
+                .fullName("Алексей Чиков Александрович")
                 .universityId("2")
                 .currentCourseNumber(4)
                 .avgExamScore(4.89F)
                 .build();
         Student student2 = Student.builder()
-                .fillName("Елена Петрова Борисовна")
+                .fullName("Елена Петрова Борисовна")
                 .universityId("3")
                 .currentCourseNumber(1)
                 .avgExamScore(4.21F)
