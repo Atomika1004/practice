@@ -1,6 +1,11 @@
 package org.example.utils;
 
 import org.example.comparators.*;
+import org.example.comparators.student.StudentAvgExamScoreComparator;
+import org.example.comparators.student.StudentCurrentCourseNumberComparator;
+import org.example.comparators.student.StudentFullNameComparator;
+import org.example.comparators.student.StudentUniversityIdComparator;
+import org.example.comparators.university.*;
 import org.example.enums.StudentComparators;
 import org.example.enums.UniversityComparators;
 

@@ -1,10 +1,10 @@
-package org.example.comparators;
+package org.example.comparators.university;
 
 import org.apache.commons.lang3.StringUtils;
-import org.example.enums.StudyProfile;
+import org.example.comparators.UniversityComparator;
 import org.example.model.University;
 
-public class UniversityStudyProfileComparator implements UniversityComparator{
+public class UniversityStudyProfileComparator implements UniversityComparator {
 
     @Override
     public int compare(University o1, University o2) {

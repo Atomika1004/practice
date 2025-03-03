@@ -1,5 +1,6 @@
-package org.example.comparators;
+package org.example.comparators.university;
 
+import org.example.comparators.UniversityComparator;
 import org.example.model.University;
 
 public class UniversityYearsOfFoundComparator implements UniversityComparator {
