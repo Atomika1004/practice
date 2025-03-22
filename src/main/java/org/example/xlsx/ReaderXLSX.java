@@ -78,7 +78,7 @@ public class ReaderXLSX {
     public static List<University> getUniversitytList() {
         List<String> stringValues = new ArrayList<>();
         StringBuilder stringBuilder = new StringBuilder();
-        File file = new File("src/main/resources/universityInfo.xlsx");
+        File file = new File("/Users/atomika/Downloads/universityInfo.xlsx");
         try {
             FileInputStream fis = new FileInputStream(file);
             XSSFWorkbook myWorkBook = new XSSFWorkbook(fis);

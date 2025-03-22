@@ -1,12 +1,24 @@
 package org.example.enums;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum StudyProfile {
-    MEDICINE,
-    ECONOMY,
-    IT,
-    ARCHITECTURE,
-    PHYSICS,
-    LINGUISTICS,
-    MATHEMATICS
+    PHYSICS("Физика"),
+    COMPUTER_SCIENCE("Информатика"),
+    MATHEMATICS("Математика"),
+    JURISPRUDENCE("Юриспруденция"),
+    MEDICINE("Медицина"),
+    LINGUISTICS("Лингвистика");
+
+    private final String profileName;
+
+    private StudyProfile(String profileName) {
+        this.profileName = profileName;
+    }
+
+    public String getProfileName() {
+        return this.profileName;
+    }
 
 }

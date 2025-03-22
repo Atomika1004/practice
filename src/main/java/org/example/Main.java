@@ -22,7 +22,7 @@ public class Main {
                 .id("1")
                 .fullName("Московский государственный университет имени М.В. Ломоносова")
                 .shortname("МГУ")
-                .studyProfile(StudyProfile.ECONOMY)
+                .studyProfile(StudyProfile.MATHEMATICS)
                 .yearOfFound(1755)
                 .build();
 
@@ -30,7 +30,7 @@ public class Main {
                 .id("2")
                 .fullName("Московский физико-технический институт")
                 .shortname("МФТИ")
-                .studyProfile(StudyProfile.IT)
+                .studyProfile(StudyProfile.MATHEMATICS)
                 .yearOfFound(1724)
                 .build();
 
