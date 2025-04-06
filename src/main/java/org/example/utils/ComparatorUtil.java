@@ -1,5 +1,6 @@
 package org.example.utils;
 
+import lombok.extern.slf4j.Slf4j;
 import org.example.comparators.*;
 import org.example.comparators.student.StudentAvgExamScoreComparator;
 import org.example.comparators.student.StudentCurrentCourseNumberComparator;
@@ -9,6 +10,7 @@ import org.example.comparators.university.*;
 import org.example.enums.StudentComparators;
 import org.example.enums.UniversityComparators;
 
+@Slf4j
 public class ComparatorUtil {
 
     ComparatorUtil() {
@@ -35,6 +37,7 @@ public class ComparatorUtil {
     }
 
     public static UniversityComparator getUniversityComparator(UniversityComparators comparator) {
+        log.info("Сортировка по полю {}",comparator.toString());
         switch (comparator) {
             case ID -> {
                 return new UniversityIdComparator();

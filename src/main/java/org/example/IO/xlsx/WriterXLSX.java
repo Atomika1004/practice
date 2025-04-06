@@ -1,5 +1,6 @@
-package org.example.xlsx;
+package org.example.IO.xlsx;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
@@ -12,16 +13,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.*;
 
-public class XlsWriter {
+@Slf4j
+public class WriterXLSX {
     List<Statistics> statisticsList;
 
-    private XlsWriter() {
+    private WriterXLSX() {
         statisticsList = new ArrayList<>();
     }
 
-
     public static void writeXlsStatistics(List<Statistics> statisticsList,
-                                          String filePath) throws IOException {
+                                          String filePath) {
 
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet statisticsSheet = workbook.createSheet("Статистика12");
@@ -66,6 +67,10 @@ public class XlsWriter {
 
         try (FileOutputStream outputStream = new FileOutputStream(filePath)) {
             workbook.write(outputStream);
+        } catch (IOException e) {
+            log.error(e.getMessage(), e);
+            e.printStackTrace();
+
         }
     }
 }

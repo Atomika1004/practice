@@ -1,4 +1,4 @@
-package org.example.xlsx;
+package org.example.IO.xlsx;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Cell;
@@ -43,7 +43,6 @@ public class ReaderXLSX {
                     }
                     Cell cell = cellIterator.next();
                     stringBuilder.append(cell).append(";");
-
                 }
                 if (!stringBuilder.isEmpty()) {
                     stringValues.add(stringBuilder.toString());
@@ -52,6 +51,7 @@ public class ReaderXLSX {
             }
         } catch (Exception e) {
             log.error(e.getMessage());
+            e.printStackTrace();
         }
         return parseStudent(stringValues);
     }
@@ -70,6 +70,7 @@ public class ReaderXLSX {
                 );
             }catch (IndexOutOfBoundsException e){
                 log.error(e.getMessage());
+                e.printStackTrace();
             }
         }
         return students;
@@ -101,6 +102,7 @@ public class ReaderXLSX {
                 stringBuilder.delete(0, stringBuilder.length());
             }
         } catch (Exception e) {
+            log.error(e.getMessage());
             e.printStackTrace();
         }
         return parseUniversity(stringValues);
@@ -121,14 +123,9 @@ public class ReaderXLSX {
                 );
             }catch (IndexOutOfBoundsException e){
                 log.error(e.getMessage());
+                e.printStackTrace();
             }
         }
         return universities;
-    }
-
-    public static void main(String[] args) {
-        ReaderXLSX reader = new ReaderXLSX();
-        System.out.println(reader.studentList);
-        System.out.println(reader.universityList);
     }
 }
